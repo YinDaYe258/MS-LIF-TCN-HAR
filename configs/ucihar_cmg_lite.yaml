@@ -1,0 +1,32 @@
+seed: 42
+device: auto
+dataset:
+  name: ucihar
+  root: data/UCI HAR Dataset
+  context_len: 4
+  val_subject_fraction: 0.2
+  smoke_max_train_sequences: 256
+  smoke_max_val_sequences: 128
+  smoke_max_test_sequences: 128
+model:
+  hidden_dim: 128
+  beta: 0.9
+  alpha: 0.8
+  theta_init: 1.0
+  theta_scale: 0.1
+  num_groups: 8
+  dropout: 0.2
+  threshold_modulation: true
+  context_memory: true
+training:
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  patience: 8
+  spike_reg_lambda: 0.0001
+  target_mode: all
+  num_workers: 0
+results:
+  dir: results

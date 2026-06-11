@@ -1,0 +1,1 @@
+"""HAR SNN experiment package."""

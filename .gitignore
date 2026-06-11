@@ -1,0 +1,47 @@
+# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local datasets and downloaded archives
+data/*
+!data/.gitkeep
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Model checkpoints and large runtime artifacts
+*.pt
+*.pth
+*.ckpt
+
+# Public code release excludes manuscripts and generated experiment outputs
+paper/
+docs/experiments/
+results/*
+!results/.gitkeep
+!results/README.md
+
+# LaTeX intermediates
+*.aux
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.dvi
+*.fls
+*.fdb_latexmk
+
+# Local environment/editor files
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,37 @@
+seed: 42
+device: auto
+dataset:
+  name: hapt12
+  task: hapt12
+  root: data/HAPT Dataset
+  context_len: 8
+  window_size: 128
+  stride: 64
+  val_subject_fraction: 0.2
+  sequence_within_segment: true
+  smoke_max_train_sequences: 256
+  smoke_max_val_sequences: 128
+  smoke_max_test_sequences: 128
+model:
+  hidden_dim: 128
+  branch_dim: 32
+  beta: 0.9
+  alpha: 0.8
+  theta_init: 1.0
+  theta_scale: 0.1
+  num_groups: 8
+  dropout: 0.2
+  threshold_modulation: true
+  context_memory: true
+training:
+  target_mode: last
+  epochs: 40
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  patience: 10
+  spike_reg_lambda: 0.0001
+  num_workers: 0
+results:
+  dir: results
